@@ -16,9 +16,14 @@ function App() {
 
   return (
     <div className="App">
-      <ul> 
-      {bars.map(bar => <li key={bar.id}>{bar.name}</li>)}
-      </ul>
+      
+      {bars.length > 0 ? 
+        <ul>
+          {bars.map(bar => <li key={bar.id}>{bar.name}</li>)}
+        </ul>
+        : <p> No bars found</p>
+      }
+      
     </div>
   );
 }
