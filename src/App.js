@@ -19,7 +19,7 @@ function App() {
       {bars.length > 0 ? (
         <ul>
           {bars.map((bar) => (
-            <li key={bar.id}>{bar.name}</li>
+            <li key={bar.place_id}>{bar.name} - Rating: {bar.rating} - Price Level: {bar.price_level}</li>
           ))}
         </ul>
       ) : (
