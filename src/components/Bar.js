@@ -1,6 +1,6 @@
 const Bar = ({ bar }) => {
   return (
-    <>
+    <div className="bar">
       <h3>{bar.name}</h3>
       <p>Address: {bar.formatted_address}</p>
       <p>Rating: {bar.rating}</p>
@@ -13,7 +13,7 @@ const Bar = ({ bar }) => {
           <li>{type}</li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 
