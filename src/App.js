@@ -1,11 +1,24 @@
+import { useState, useEffect } from 'react';
+import getBars from './services/getBars';
 import './App.css';
-function App() {
 
-  
+function App() {
+  const [bars, setBars] = useState([]);
+
+  useEffect(() => {
+    const fetchBars = async () => {
+      const barsFromServer = await getBars();
+      setBars(barsFromServer)
+    }
+
+    fetchBars();
+  }, []);
 
   return (
     <div className="App">
-      <p>Hello World</p>
+      <ul> 
+      {bars.map(bar => <li key={bar.id}>{bar.name}</li>)}
+      </ul>
     </div>
   );
 }
