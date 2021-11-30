@@ -1,0 +1,9 @@
+{
+  "bars": [
+    { "id": 1, "name": "Joe's Bar", "tag": "cosy" },
+    { "id": 2, "name": "McNally's Irish Pub", "tag": "live-music" },
+    { "id": 3, "name": "The Wall", "tag": "dive" },
+    { "id": 4, "name": "Parklife", "tag": "gastropub" },
+    { "id": 5, "name": "Walkabout", "tag": "shithole" }
+  ]
+}
