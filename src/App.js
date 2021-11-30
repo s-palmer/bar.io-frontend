@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import getBars from './services/getBars';
-import './App.css';
+import { useState, useEffect } from "react";
+import getBars from "./services/getBars";
+import "./App.css";
 
 function App() {
   const [bars, setBars] = useState([]);
@@ -8,22 +8,23 @@ function App() {
   useEffect(() => {
     const fetchBars = async () => {
       const barsFromServer = await getBars();
-      setBars(barsFromServer)
-    }
+      setBars(barsFromServer);
+    };
 
     fetchBars();
   }, []);
 
   return (
     <div className="App">
-      
-      {bars.length > 0 ? 
+      {bars.length > 0 ? (
         <ul>
-          {bars.map(bar => <li key={bar.id}>{bar.name}</li>)}
+          {bars.map((bar) => (
+            <li key={bar.id}>{bar.name}</li>
+          ))}
         </ul>
-        : <p> No bars found</p>
-      }
-      
+      ) : (
+        <p> No bars found</p>
+      )}
     </div>
   );
 }

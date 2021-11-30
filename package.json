@@ -13,11 +13,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
+    "start-17": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "json-server --watch db.json --port 8000"
+    "api": "json-server --watch db.json --port 8000"
   },
   "eslintConfig": {
     "extends": [
