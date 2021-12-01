@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import getBars from "./services/getBars";
+import Bars from './components/Bars'
 import "./App.css";
 
 function App() {
@@ -15,16 +16,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      {bars.length > 0 ? (
-        <ul>
-          {bars.map((bar) => (
-            <li key={bar.id}>{bar.name}</li>
-          ))}
-        </ul>
-      ) : (
-        <p> No bars found</p>
-      )}
+    <div className="container">
+      {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found</p>}
     </div>
   );
 }
