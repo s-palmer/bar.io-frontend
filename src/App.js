@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="container">
-      {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found</p>}
+      {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>}
     </div>
   );
 }
