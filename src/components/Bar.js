@@ -7,7 +7,7 @@ const Bar = ({ bar }) => {
       <p>Price Level: {bar.price_level}</p>
       <p>User Ratings: {bar.user_ratings_total}</p>
       <p>Open Now? {bar.opening_hours.open_now ? 'Yes' : 'No' }</p>
-      <img src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg" alt="simmons-bar"></img>
+      <img width="100%" src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg" alt="simmons-bar"></img>
       <ul>
         {bar.types.map((type, index) => (
           <li key={index}>{type}</li>

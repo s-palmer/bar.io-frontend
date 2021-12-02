@@ -13,6 +13,7 @@ const UserInputForm = () => {
   }
 
   return (
+    <div className="userInput">
     <form onSubmit={handleSubmit}>
       <label>
         Location:
@@ -20,6 +21,7 @@ const UserInputForm = () => {
       </label>
       <input type="submit" value="Submit" />
     </form>
+    </div>
   )
 }
 
