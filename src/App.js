@@ -4,7 +4,6 @@ import Bars from "./components/Bars";
 import UserInputForm from "./components/UserInputForm";
 import MapComponent from "./components/MapComponent";
 import "./App.css";
-import VirtualizedList from "./components/ScrollingList";
 
 function App() {
   const [bars, setBars] = useState([]);
@@ -23,7 +22,6 @@ function App() {
       <UserInputForm />
       <div className="bars-maps">
         <MapComponent />
-        {/* {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>} */}
         {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>}
       </div>
     </div>
