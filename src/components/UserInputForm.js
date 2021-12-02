@@ -15,19 +15,11 @@ const UserInputForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Name:
-        <input type="text" value={text} onChange={handleChange} />
+        Location:
+        <input type="text" placeholder="Enter Postcode" value={text} onChange={handleChange} />
       </label>
       <input type="submit" value="Submit" />
     </form>
-
-
-    // <form>
-    //   <input type='text' placeholder='enter postcode' value={text}>
-    //   </input>
-    //   <input type='submit' value='enter'>
-    //   </input>
-    // </form>
   )
 }
 
