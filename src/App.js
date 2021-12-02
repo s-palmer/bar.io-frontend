@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import getBars from "./services/getBars";
-import Bars from './components/Bars'
-import UserInputForm from './components/UserInputForm'
+import Bars from "./components/Bars";
+import UserInputForm from "./components/UserInputForm";
 import MapComponent from "./components/MapComponent";
 import "./App.css";
 
@@ -19,9 +19,11 @@ function App() {
 
   return (
     <div className="container">
-    <UserInputForm/>
-    <MapComponent />
-      {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>}
+      <UserInputForm />
+      <div className="bars-maps">
+        <MapComponent />
+        {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>}
+      </div>
     </div>
   );
 }

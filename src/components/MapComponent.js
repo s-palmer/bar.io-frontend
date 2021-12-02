@@ -4,14 +4,14 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
-  height: "400px",
+  height: "600px",
 };
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
 const center = {
   lat: 51.5173523,
-  lng: -0.0732582,
+  lng: -0.0732582
 };
 
 const MapComponent = () => {
