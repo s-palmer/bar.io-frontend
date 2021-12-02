@@ -19,7 +19,6 @@ const MapComponent = () => {
     id: "google-map-script",
     googleMapsApiKey: Apikey,
     region: "uk",
-
   });
 
   const [map, setMap] = useState(null);
