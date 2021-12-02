@@ -9,8 +9,8 @@ const Bar = ({ bar }) => {
       <p>Open Now? {bar.opening_hours.open_now ? 'Yes' : 'No' }</p>
       <img src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg" alt="simmons-bar"></img>
       <ul>
-        {bar.types.map((type) => (
-          <li>{type}</li>
+        {bar.types.map((type, index) => (
+          <li key={index}>{type}</li>
         ))}
       </ul>
     </div>
