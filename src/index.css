@@ -30,27 +30,36 @@ code {
   display: grid;
   grid-template-columns:65% 35%;
   column-gap: 10px;
-  margin: 15px 0px;
-  overflow: auto;
+  margin: 5px 0px;
+  overflow: hidden;
   border: 1px solid steelblue;
 }
 
-/* .map { */
-  /* max-width: 600px;
+.scroller {
+  margin: 0 auto;
+  height: 600px;
+  width: 100%;
+  overflow: auto;
+}
+
+.bars-list-item {
+  margin: 30px 0;
+}
+
+/* .map {
+  max-width: 600px;
   margin: 30px auto;
-  /* overflow: auto; */
-  /* min-height: 400px; */
-  /* border: 1px solid steelblue;
+  overflow: auto;
+  min-height: 400px;
+  border: 1px solid steelblue;
   padding: 30px;
-  border-radius: 5px; */
-/* } */
+  border-radius: 5px;
+} */
 
 .bars-list {
   max-width: 100%;
-  /* margin: 5px 5px; */
+  margin: 0px 10px;
   overflow: auto;
-  /* min-height: 300px; */
-  /* border: 1px solid steelblue; */
   border-radius: 5px;
 }
 
