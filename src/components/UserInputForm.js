@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import sendUserRequest from "../services/sendUserRequest";
 
 const UserInputForm = () => {
   const [text, setText] = useState("");
@@ -11,7 +12,9 @@ const UserInputForm = () => {
     console.log({ text });
     console.log({ mins });
 
-    
+    sendUserRequest(text, mins);
+
+    setText('');
   };
 
   const setTextChange = (event) => {
