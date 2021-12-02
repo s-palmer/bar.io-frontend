@@ -9,11 +9,6 @@ const containerStyle = {
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
-const center = {
-  lat: 51.5173523,
-  lng: -0.0732582
-};
-
 const MapComponent = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
@@ -33,12 +28,17 @@ const MapComponent = () => {
     setMap(null);
   }, []);
 
+  const center = {
+    lat: 51.5173523,
+    lng: -0.0732582
+  };
+
   return isLoaded ? (
     <div className="map">
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={16}
+      zoom={15}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
