@@ -1,10 +1,18 @@
-import { getGeocode } from "use-places-autocomplete";
+import { getGeocode, getLatLng } from "use-places-autocomplete";
 
-const geoCoder = ( {input} ) => {
+const geoCoder = (input) => {
 
-  getGeocode(input)
-  .then((results) => {
-    console.log("Geocoding results: ", results);
+  const parameter = {
+    address: input,
+    region: "uk"
+  };
+
+  getGeocode(parameter)
+  .then((results) => 
+    getLatLng(results[0])
+  )
+  .then(({ lat, lng }) => {
+    console.log({ lat, lng })
   })
   .catch((error) => {
     console.log("Error: ", error);
