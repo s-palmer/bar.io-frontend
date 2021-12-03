@@ -8,6 +8,7 @@ import "./App.css";
 
 function App() {
   const [bars, setBars] = useState([]);
+  const [userLocation, setUserLocation] = useState("");
 
   useEffect(() => {
     const fetchBars = async () => {
@@ -22,7 +23,7 @@ function App() {
     <div className="main">
       <Header />
       <div className="container">
-        <UserInputForm />
+        <UserInputForm setUserLocation={setUserLocation}/>
         <div className="bars-maps">
           <MapComponent />
           {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>}
