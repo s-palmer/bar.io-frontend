@@ -9,6 +9,11 @@ const UserInputForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+
+    if (!text) {
+      alert('Please enter a location')
+      return
+    }
     console.log({ text });
     console.log({ mins });
 
