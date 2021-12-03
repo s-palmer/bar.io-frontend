@@ -18,5 +18,6 @@ test('location input should be required', () => {
 test('user should be able to select a number of minutes', () => {
   render(<UserInputForm/>)
 
-  const sliderInput = screen.getB
+  const sliderInput = screen.getByTestId('minutes-input')
+  expect(sliderInput).toBeEnabled();
 })

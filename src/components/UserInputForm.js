@@ -57,6 +57,7 @@ const UserInputForm = () => {
               marks={true}
               min={5}
               max={30}
+              data-testid="minutes-input"
             />
           </label>
         </Box>
