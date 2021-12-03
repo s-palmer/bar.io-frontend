@@ -1,6 +1,6 @@
 import { getGeocode, getLatLng } from "use-places-autocomplete";
 
-const geoCoder = (input) => {
+const geoCoder = (setUserLocation, input) => {
 
   const parameter = {
     address: input,
@@ -11,8 +11,10 @@ const geoCoder = (input) => {
   .then((results) => 
     getLatLng(results[0])
   )
-  .then(({ lat, lng }) => {
-    console.log({ lat, lng })
+  .then(
+    ({ lat, lng }) => {
+    console.log({ lat, lng });
+    setUserLocation({lat, lng});
   })
   .catch((error) => {
     console.log("Error: ", error);

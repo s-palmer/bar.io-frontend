@@ -11,6 +11,10 @@ function App() {
   const [userLocation, setUserLocation] = useState("");
 
   useEffect(() => {
+    console.log(userLocation);
+  })
+
+  useEffect(() => {
     const fetchBars = async () => {
       const barsFromServer = await getBars();
       setBars(barsFromServer);
