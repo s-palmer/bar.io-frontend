@@ -10,10 +10,6 @@ const UserInputForm = () => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    if (!text) {
-      alert('Please enter a location')
-      return
-    }
     console.log({ text });
     console.log({ mins });
 
@@ -44,6 +40,8 @@ const UserInputForm = () => {
             placeholder="Enter Postcode"
             value={text}
             onChange={setTextChange}
+            data-testid="location-input"
+            required
           />
         </label>
         <Box sx={{ width: 300 }}>
@@ -62,7 +60,7 @@ const UserInputForm = () => {
             />
           </label>
         </Box>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" data-testid="submit-btn"/>
       </form>
     </div>
   );
