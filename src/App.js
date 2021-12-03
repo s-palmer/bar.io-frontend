@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   const [bars, setBars] = useState([]);
-  const [userLocation, setUserLocation] = useState("");
+  const [userLocation, setUserLocation] = useState({});
 
   useEffect(() => {
     console.log(userLocation);
