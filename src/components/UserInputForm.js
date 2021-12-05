@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import sendUserRequest from "../services/sendUserRequest";
+import geoCoder from "../services/geoCoder";
 
-const UserInputForm = () => {
+const UserInputForm = ( {setUserLocation} ) => {
   const [text, setText] = useState("");
-  const [mins, setMins] = useState("");
+  const [mins, setMins] = useState(15);
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -13,7 +13,7 @@ const UserInputForm = () => {
     console.log({ text });
     console.log({ mins });
 
-    sendUserRequest(text, mins);
+    geoCoder(setUserLocation, text);
 
     setText('');
   };
