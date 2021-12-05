@@ -52,7 +52,6 @@ const MapComponent = ({ bars }) => {
         onUnmount={onUnmount}
       >
         <>
-          <Marker position={{ lat: 48.0, lng: -122.0 }} />
           {markerLocations()}
         </>
       </GoogleMap>

@@ -9,6 +9,11 @@ import "./App.css";
 function App() {
   const [bars, setBars] = useState([]);
   const [loading, setLoading] = useState(true)
+  const [userLocation, setUserLocation] = useState({});
+
+  useEffect(() => {
+    console.log(userLocation);
+  })
 
   useEffect(() => {
     const fetchBars = async () => {
@@ -25,7 +30,7 @@ function App() {
     <div className="main">
       <Header />
       <div className="container">
-        <UserInputForm />
+        <UserInputForm setUserLocation={setUserLocation}/>
         <div className="bars-maps">
           {loading ? (
             <h3>Loading...</h3>
