@@ -9,11 +9,6 @@ const containerStyle = {
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
-const center = {
-  lat: 51.5173523,
-  lng: -0.0732582,
-};
-
 const MapComponent = ({ bars }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
@@ -25,6 +20,7 @@ const MapComponent = ({ bars }) => {
 
   const onLoad = useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
+    
     map.fitBounds(bounds);
     setMap(map);
   }, []);
@@ -50,8 +46,8 @@ const MapComponent = ({ bars }) => {
     <div className="map">
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={center}
-        zoom={16}
+        center={ {lat: 51.5173523, lng: -0.0732582} }
+        zoom={14}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
