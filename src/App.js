@@ -8,11 +8,14 @@ import "./App.css";
 
 function App() {
   const [bars, setBars] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchBars = async () => {
       const barsFromServer = await getBars();
       setBars(barsFromServer);
+
+      setLoading(false)
     };
 
     fetchBars();
@@ -24,8 +27,15 @@ function App() {
       <div className="container">
         <UserInputForm />
         <div className="bars-maps">
-          <MapComponent />
+          {loading ? (
+            <h3>Loading...</h3>
+          ) : (
+          <>
+          <MapComponent bars={bars}/>
           {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>}
+          </>
+          )
+          }
         </div>
       </div>
     </div>
