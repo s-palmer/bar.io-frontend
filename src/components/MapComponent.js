@@ -20,7 +20,6 @@ const MapComponent = ({ bars }) => {
 
   const onLoad = useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
-    
     map.fitBounds(bounds);
     setMap(map);
   }, []);

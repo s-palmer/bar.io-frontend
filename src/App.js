@@ -19,7 +19,6 @@ function App() {
     const fetchBars = async () => {
       const barsFromServer = await getBars();
       setBars(barsFromServer);
-
       setLoading(false)
     };
 
