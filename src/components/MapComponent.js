@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useCallback } from 'react'
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { useState, useCallback } from "react";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
@@ -9,12 +9,7 @@ const containerStyle = {
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
-const center = {
-  lat: 51.5173523,
-  lng: -0.0732582
-};
-
-const MapComponent = () => {
+const MapComponent = ({ bars }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: Apikey,
@@ -33,18 +28,32 @@ const MapComponent = () => {
     setMap(null);
   }, []);
 
+  const markerLocations = () => {
+    return bars.map((bar, index) => {
+      return (
+        <Marker
+          position={{
+            lat: bar.geometry.location.lat,
+            lng: bar.geometry.location.lng,
+          }}
+        key={index}/>
+      );
+    });
+  };
+
   return isLoaded ? (
     <div className="map">
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={16}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      {/* Child components, such as markers, info windows, etc. */}
-      <></>
-    </GoogleMap>
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={ {lat: 51.5173523, lng: -0.0732582} }
+        zoom={14}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+      >
+        <>
+          {markerLocations()}
+        </>
+      </GoogleMap>
     </div>
   ) : (
     <></>
