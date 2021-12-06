@@ -37,7 +37,7 @@ const MapComponent = ({ bars }) => {
             lat: bar.geometry.location.lat,
             lng: bar.geometry.location.lng
           }}
-          key={bar.place_id}
+          key={index}
           onClick={() => { setSelectedBar(bar);}}
         />
       );
