@@ -9,7 +9,7 @@ const containerStyle = {
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
-const MapComponent = ({ bars }) => {
+const MapComponent = ({ bars, location }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: Apikey,
@@ -29,34 +29,28 @@ const MapComponent = ({ bars }) => {
     setMap(null);
   }, []);
 
-  const markerLocations = () => {
-    return bars.map((bar, index) => {
-      return (
-        <Marker
-          position={{
-            lat: bar.geometry.location.lat,
-            lng: bar.geometry.location.lng
-          }}
-          key={index}
-          onClick={() => { setSelectedBar(bar);}}
-        />
-      );
-    });
-  };
+  const markerLocations = bars.map((bar, index) => (
+    <Marker
+      position={{
+        lat: bar.geometry.location.lat,
+        lng: bar.geometry.location.lng,
+      }}
+      key={index}
+      onClick={() => { setSelectedBar(bar);}}
+    />
+  ));
+
 
   return isLoaded ? (
     <div className="map">
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={ {lat: 51.5173523, lng: -0.0732582} }
-        zoom={14}
+        center={location}
+        zoom={13}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        <>
-          {markerLocations()}
-        
-
+        <>{markerLocations}</>
         {selectedBar && (
           <InfoWindow
             position={{ lat: selectedBar.geometry.location.lat, lng: selectedBar.geometry.location.lng }}

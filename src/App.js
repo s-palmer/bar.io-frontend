@@ -1,47 +1,68 @@
 import { useState, useEffect } from "react";
+import { useJsApiLoader } from "@react-google-maps/api";
 import getBars from "./services/getBars";
 import Bars from "./components/Bars";
 import UserInputForm from "./components/UserInputForm";
 import MapComponent from "./components/MapComponent";
-import Header from "./components/Header"
+import Header from "./components/Header";
 import "./App.css";
+
+const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
 function App() {
   const [bars, setBars] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const [userLocation, setUserLocation] = useState({});
+  const [userInputPresent, setUserInputPresent] = useState(false);
 
-  useEffect(() => {
-    console.log(userLocation);
-  })
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: Apikey,
+    region: "uk",
+  });
 
-  useEffect(() => {
-    const fetchBars = async () => {
-      const barsFromServer = await getBars();
-      setBars(barsFromServer);
-      setLoading(false)
-    };
+  // Remove useEffect and set function to run when user location is submitted AFTER geocoder data returns
+  // Instantiate map / markers after sending location to geocoder and getting the return value
+  // Check zoom level and map center
 
-    fetchBars();
-  }, []);
+  const fetchBars = async (location) => {
+    const barsFromServer = await getBars(location);
+    setBars(barsFromServer);
+    setLoading(false);
+    setUserInputPresent(true);
+  };
 
   return (
     <div className="main">
       <Header />
+      { isLoaded && 
       <div className="container">
-        <UserInputForm setUserLocation={setUserLocation}/>
-        <div className="bars-maps">
-          {loading ? (
-            <h3>Loading...</h3>
-          ) : (
+        <UserInputForm
+          setUserLocation={setUserLocation}
+          fetchBars={fetchBars}
+        />
+        {userInputPresent ? (
+          <div className="bars-maps">
+            {loading ? (
+              <h3>Loading...</h3>
+            ) : (
+              <>
+                <MapComponent bars={bars} location={userLocation} zoom={13} />
+                {bars.length > 0 ? (
+                  <Bars bars={bars} />
+                ) : (
+                  <p>No bars found...</p>
+                )}
+              </>
+            )}
+          </div>
+        ) : (
           <>
-          <MapComponent bars={bars}/>
-          {bars.length > 0 ? <Bars bars={bars} /> : <p>No bars found...</p>}
+            <h2>Please enter your location</h2>
           </>
-          )
-          }
-        </div>
+        )}
       </div>
+      }
     </div>
   );
 }
