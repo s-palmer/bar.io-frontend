@@ -9,7 +9,7 @@ const containerStyle = {
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
-const MapComponent = ({ bars, location, zoom }) => {
+const MapComponent = ({ bars, location }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: Apikey,
@@ -43,7 +43,7 @@ const MapComponent = ({ bars, location, zoom }) => {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={location}
-        zoom={zoom}
+        zoom={13}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >

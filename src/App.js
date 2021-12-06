@@ -47,7 +47,7 @@ function App() {
               <h3>Loading...</h3>
             ) : (
               <>
-                <MapComponent bars={bars} location={userLocation} zoom={16}/>
+                <MapComponent bars={bars} location={userLocation} zoom={13} />
                 {bars.length > 0 ? (
                   <Bars bars={bars} />
                 ) : (
