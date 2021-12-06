@@ -63,7 +63,6 @@ const MapComponent = ({ bars, location }) => {
             </div>
           </InfoWindow>
         )}
-        </>
       </GoogleMap>
     </div>
   ) : (
