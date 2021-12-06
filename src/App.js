@@ -29,7 +29,6 @@ function App() {
     const barsFromServer = await getBars(location);
     setBars(barsFromServer);
     setLoading(false);
-    setUserInputPresent(true);
   };
 
   return (
@@ -40,6 +39,7 @@ function App() {
         <UserInputForm
           setUserLocation={setUserLocation}
           fetchBars={fetchBars}
+          setUserInputPresent={setUserInputPresent}
         />
         {userInputPresent ? (
           <div className="bars-maps">
