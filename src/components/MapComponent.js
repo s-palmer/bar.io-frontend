@@ -9,7 +9,7 @@ const containerStyle = {
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
-const MapComponent = ({ bars }) => {
+const MapComponent = ({ bars, location, zoom }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: Apikey,
@@ -28,31 +28,26 @@ const MapComponent = ({ bars }) => {
     setMap(null);
   }, []);
 
-  const markerLocations = () => {
-    return bars.map((bar, index) => {
-      return (
-        <Marker
-          position={{
-            lat: bar.geometry.location.lat,
-            lng: bar.geometry.location.lng,
-          }}
-        key={index}/>
-      );
-    });
-  };
+  const markerLocations = bars.map((bar, index) => (
+    <Marker
+      position={{
+        lat: bar.geometry.location.lat,
+        lng: bar.geometry.location.lng,
+      }}
+      key={index}
+    />
+  ));
 
   return isLoaded ? (
     <div className="map">
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={ {lat: 51.5173523, lng: -0.0732582} }
-        zoom={14}
+        center={location}
+        zoom={zoom}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        <>
-          {markerLocations()}
-        </>
+        <>{markerLocations}</>
       </GoogleMap>
     </div>
   ) : (

@@ -3,18 +3,16 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import geoCoder from "../services/geoCoder";
 
-const UserInputForm = ( {setUserLocation} ) => {
+const UserInputForm = ( {setUserLocation, fetchBars} ) => {
   const [text, setText] = useState("");
   const [mins, setMins] = useState(15);
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-
-    console.log({ text });
-    console.log({ mins });
-
-    geoCoder(setUserLocation, text);
-
+    console.log(text, mins);
+    const res = await geoCoder(setUserLocation, text);
+    fetchBars(res);
+    
     setText('');
   };
 
