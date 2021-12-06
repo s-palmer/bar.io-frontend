@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
@@ -17,6 +17,7 @@ const MapComponent = ({ bars, location }) => {
   });
 
   const [map, setMap] = useState(null);
+  const [selectedBar, setSelectedBar] = useState(null);
 
   const onLoad = useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
@@ -35,8 +36,10 @@ const MapComponent = ({ bars, location }) => {
         lng: bar.geometry.location.lng,
       }}
       key={index}
+      onClick={() => { setSelectedBar(bar);}}
     />
   ));
+
 
   return isLoaded ? (
     <div className="map">
@@ -48,6 +51,19 @@ const MapComponent = ({ bars, location }) => {
         onUnmount={onUnmount}
       >
         <>{markerLocations}</>
+        {selectedBar && (
+          <InfoWindow
+            position={{ lat: selectedBar.geometry.location.lat, lng: selectedBar.geometry.location.lng }}
+            onCloseClick={() => {
+              setSelectedBar(null);
+            }}
+          >
+            <div>
+              <p>Bar name: {selectedBar.name}</p>
+            </div>
+          </InfoWindow>
+        )}
+        </>
       </GoogleMap>
     </div>
   ) : (
