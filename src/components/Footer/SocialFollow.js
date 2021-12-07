@@ -12,7 +12,7 @@ import "./Footer.css";
 const SocialFollow = () => {
   return (
     <div className='social-container' >
-      <h3> Swep-III @makers</h3>
+      <a href='https://makers.tech/'>Swep-III @makers</a>
       <a 
       href='https://github.com/makersacademy' className="social"
       >
