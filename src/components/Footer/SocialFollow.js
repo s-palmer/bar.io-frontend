@@ -29,7 +29,7 @@ const SocialFollow = () => {
       <FontAwesomeIcon icon={faNode} size='2x' />
       </a>
       <a 
-      href='https://console.cloud.google.com/apis/dashboard?project=resonant-augury-333910' className="social"
+      href='https://cloud.google.com/apis/docs/overview' className="social"
       >
       <FontAwesomeIcon icon={faGoogle} size='2x' />
       </a>
