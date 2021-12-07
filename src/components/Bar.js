@@ -3,6 +3,8 @@ const DIR_URL = "https://www.google.com/maps/dir/?api=1&destination=";
 const Bar = ({ bar }) => {
   const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}`;
 
+  
+
   // Need to add user origin when we have user location being taken from the form
 
   return (
@@ -15,10 +17,9 @@ const Bar = ({ bar }) => {
       ></img>
       <p><b>Address:</b> {bar.formatted_address}</p>
       <p><b>Rating:</b> {bar.rating}</p>
-      <p><b>Price Level:</b> {bar.price_level}</p>
+      <p><b>Price Level:</b> {"£".repeat(bar.price_level)}</p>
       <p><b>User Ratings:</b> {bar.user_ratings_total}</p>
 
-      
       <ul>
         {bar.types.map((type, index) => (
           <li key={index}>{type}</li>
