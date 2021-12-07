@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useCallback } from "react";
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from "@react-google-maps/api";
+import InfoWindowContent from "./InfoWindowContent";
 
 const containerStyle = {
   width: "100%",
@@ -57,9 +58,7 @@ const MapComponent = ({ bars, location }) => {
               setSelectedBar(null);
             }}
           >
-            <div>
-              <p>Bar name: {selectedBar.name}</p>
-            </div>
+            <InfoWindowContent selectedBar={selectedBar} />
           </InfoWindow>
         )}
       </GoogleMap>
