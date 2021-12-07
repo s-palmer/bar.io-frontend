@@ -21,10 +21,9 @@ const MapComponent = ({ bars, location }) => {
   const [selectedBar, setSelectedBar] = useState(null);
 
   const onLoad = useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
+    map.panTo(location);
     setMap(map);
-  }, []);
+  }, [location]);
 
   const onUnmount = useCallback(function callback(map) {
     setMap(null);
@@ -47,7 +46,7 @@ const MapComponent = ({ bars, location }) => {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={location}
-        zoom={13}
+        zoom={14}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
