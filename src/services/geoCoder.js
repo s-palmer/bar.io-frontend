@@ -15,10 +15,9 @@ const geoCoder = (setUserLocation, text) => {
   )
   .then(
     ({ lat, lng }) => {
-    console.log({ lat, lng });
     const res = { lat, lng };
-    setUserLocation({lat, lng});
     console.log(res);
+    setUserLocation(res);
     return res;
   })
   .catch((error) => {

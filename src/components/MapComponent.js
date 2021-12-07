@@ -32,8 +32,8 @@ const MapComponent = ({ bars, location }) => {
   const markerLocations = bars.map((bar, index) => (
     <Marker
       position={{
-        lat: bar.geometry.location.lat,
-        lng: bar.geometry.location.lng,
+        lat: bar.location.lat,
+        lng: bar.location.lng,
       }}
       key={index}
       onClick={() => { setSelectedBar(bar);}}
@@ -53,7 +53,7 @@ const MapComponent = ({ bars, location }) => {
         <>{markerLocations}</>
         {selectedBar && (
           <InfoWindow
-            position={{ lat: selectedBar.geometry.location.lat, lng: selectedBar.geometry.location.lng }}
+            position={{ lat: selectedBar.location.lat, lng: selectedBar.location.lng }}
             onCloseClick={() => {
               setSelectedBar(null);
             }}

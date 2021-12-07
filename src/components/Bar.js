@@ -1,7 +1,7 @@
 const DIR_URL = "https://www.google.com/maps/dir/?api=1&destination=";
 
 const Bar = ({ bar }) => {
-  const BarLink = `${DIR_URL}${bar.geometry.location.lat},${bar.geometry.location.lng}`;
+  const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}`;
 
   // Need to add user origin when we have user location being taken from the form
 
