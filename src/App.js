@@ -23,10 +23,6 @@ function App() {
     region: "uk",
   });
 
-  // Remove useEffect and set function to run when user location is submitted AFTER geocoder data returns
-  // Instantiate map / markers after sending location to geocoder and getting the return value
-  // Check zoom level and map center
-
   const fetchBars = async (res, mins) => {
     const barsFromServer = await sendUserRequest(res, mins);
     setBars(barsFromServer);
