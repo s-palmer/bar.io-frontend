@@ -25,6 +25,7 @@ body {
   height:36px;
   opacity:0;
   font-family:Helvetica, Arial, sans-serif;
+  font-size: 60px;
   animation:move 2s linear infinite;
   -o-animation:move 2s linear infinite;
   -moz-animation:move 2s linear infinite;
@@ -33,7 +34,7 @@ body {
   -o-transform:rotate(180deg);
   -moz-transform:rotate(180deg);
   -webkit-transform:rotate(180deg);
-  color:#1f74e4;
+  color:steelblue;
 }
 
 #load div:nth-child(2) {
