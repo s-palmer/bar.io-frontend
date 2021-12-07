@@ -47,7 +47,7 @@ function App() {
               <>
                 <MapComponent bars={bars} location={userLocation} zoom={13} />
                 {bars.length > 0 ? (
-                  <Bars bars={bars} />
+                  <Bars bars={bars} location={userLocation}/>
                 ) : (
                   <p>No bars found...</p>
                 )}
