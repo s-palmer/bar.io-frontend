@@ -7,6 +7,7 @@ import MapComponent from "./components/MapComponent";
 import Header from "./components/Header";
 import "./App.css";
 import sendUserRequest from "./services/sendUserRequest";
+import "./loadingAnimation.css";
 
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
@@ -45,7 +46,15 @@ function App() {
         {userInputPresent ? (
           <div className="bars-maps">
             {loading ? (
-              <h3>Loading...</h3>
+            <div id="load">
+              <div>G</div>
+              <div>N</div>
+              <div>I</div>
+              <div>D</div>
+              <div>A</div>
+              <div>O</div>
+              <div>L</div>
+            </div>
             ) : (
               <>
                 <MapComponent bars={bars} location={userLocation} zoom={13} />
