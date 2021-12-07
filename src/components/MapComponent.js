@@ -59,7 +59,7 @@ const MapComponent = ({ bars, location }) => {
               setSelectedBar(null);
             }}
           >
-            <InfoWindowContent selectedBar={selectedBar} />
+            <InfoWindowContent selectedBar={selectedBar} userLocation={location}/>
           </InfoWindow>
         )}
       </GoogleMap>
