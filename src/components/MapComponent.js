@@ -22,8 +22,9 @@ const MapComponent = ({ bars, location }) => {
   const onLoad = useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
     map.fitBounds(bounds);
+    map.panTo(location);
     setMap(map);
-  }, []);
+  }, [location]);
 
   const onUnmount = useCallback(function callback(map) {
     setMap(null);
