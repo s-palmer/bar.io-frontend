@@ -5,6 +5,8 @@ import UserInputForm from "./components/UserInputForm";
 import MapComponent from "./components/MapComponent";
 import Header from "./components/Header"
 import Footer from "./components/Footer/Footer";
+import SocialFollow from "./components/Footer/SocialFollow";
+
 import "./App.css";
 
 function App() {

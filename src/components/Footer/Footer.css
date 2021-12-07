@@ -1,0 +1,16 @@
+
+li {
+  list-style-type: none;
+}
+
+/* Social Follow Stuff */
+
+a.social{
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
