@@ -1,12 +1,10 @@
-import photosApi from "../services/photosAPI";
-
-// const DIR_URL = "https://www.google.com/maps/dir/?api=1&destination=";
-
 const DIR_URL = process.env.REACT_APP_DIR_URL;
+const photoApiURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=600"
+const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
 const Bar = ({ bar }) => {
   const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}`;
-  const imgSRC = photosApi(bar.photo_reference)
+  const photoURL = `${photoApiURL}&key=${Apikey}&photo_reference=${bar.photo_reference}`
 
   return (
     <div className="bar">
@@ -18,8 +16,8 @@ const Bar = ({ bar }) => {
 
       <img
         width="100%"
-        src={imgSRC}
-        alt="simmons-bar"
+        src={photoURL}
+        alt={bar.name}
       ></img>
       <ul>
         {bar.types.map((type, index) => (
