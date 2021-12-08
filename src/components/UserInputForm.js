@@ -2,6 +2,7 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import geoCoder from "../services/geoCoder";
+import './Form/Form.css'
 
 const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
   const [text, setText] = useState("");
