@@ -73,6 +73,20 @@ code {
   justify-content: space-between;
 }
 
+.bar-card-title {
+  color: orange;
+  text-shadow: 2px 2px 4px white;;
+  font-size: 25px;
+  margin-top:-30px;
+  margin-bottom:-20px;
+}
+
+.bar-card-image {
+  border: 5px solid white
+}
+
+
+
 .direction-button {
   background-color: #1976d2;
   color: white;

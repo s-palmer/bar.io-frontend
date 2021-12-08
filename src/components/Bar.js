@@ -4,22 +4,30 @@ const Bar = ({ bar, location }) => {
   const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}&origin=${location.lat},${location.lng}`;
   return (
     <div className="bar">
-      <h3>{bar.name}</h3>
-      <img
-        width="100%"
-        src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg"
-        alt="simmons-bar"
-      ></img>
-      <p><b>Address:</b> {bar.formatted_address}</p>
-      <p>
-      <b>Rating:</b> {bar.rating}
-      <br/>
-      <b>Price Level:</b> {"£".repeat(bar.price_level)}
-      <br/>
-      <b>No. Of Ratings:</b> {bar.user_ratings_total}</p>
+
+      <div className="bar-card-title">
+        <h3>{bar.name}</h3>
+      </div>
+
+      <div className="bar-card-image">
+        <img
+          width="100%"
+          src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg"
+          alt="simmons-bar"
+        ></img>
+      </div>
+
+      <div name="bar-card-info">
+        <p><b>Address:</b> {bar.formatted_address}</p>
+        <p><b>Price Level:</b> {"£".repeat(bar.price_level)}</p>
+        <p><b>Rating:</b> {bar.rating}</p>
+        <p><b>No. Of Ratings:</b> {bar.user_ratings_total}</p>
+      </div>
+
       <a href={BarLink} className="direction-button">
         Take me to {bar.name}
       </a>
+    
     </div>
   );
 };
