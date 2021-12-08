@@ -16,13 +16,7 @@ const Bar = ({ bar, location }) => {
       <br/>
       <b>Price Level:</b> {"£".repeat(bar.price_level)}
       <br/>
-      <b>User Ratings:</b> {bar.user_ratings_total}</p>
-      <b>Tags:</b>
-      {bar.types.map((type, index) => (
-          <li key={index}>{type}</li>
-        ))}
-      <br/>
-
+      <b>No. Of Ratings:</b> {bar.user_ratings_total}</p>
       <a href={BarLink} className="direction-button">
         Take me to {bar.name}
       </a>
