@@ -2,8 +2,8 @@ const DIR_URL = process.env.REACT_APP_DIR_URL;
 const photoApiURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=600"
 const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
-const Bar = ({ bar }) => {
-  const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}`;
+const Bar = ({ bar, location }) => {
+  const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}&origin=${location.lat},${location.lng}`;
   const photoURL = `${photoApiURL}&key=${Apikey}&photo_reference=${bar.photo_reference}`
 
   return (

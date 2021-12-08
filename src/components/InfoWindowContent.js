@@ -1,7 +1,7 @@
 const DIR_URL = "https://www.google.com/maps/dir/?api=1&destination=";
 
-const InfoWindowContent = ({selectedBar}) => {
-  const BarLink = `${DIR_URL}${selectedBar.location.lat},${selectedBar.location.lng}`;
+const InfoWindowContent = ({selectedBar, userLocation}) => {
+  const BarLink = `${DIR_URL}${selectedBar.location.lat},${selectedBar.location.lng}&origin=${userLocation.lat},${userLocation.lng}`;
 
   return (
     <div>
