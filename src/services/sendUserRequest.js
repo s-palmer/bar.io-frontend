@@ -1,26 +1,18 @@
-const postURL = process.env.REACT_APP_TEST_API_POST
-
-const sendUserRequest = (props) => {
-  const mins = props.mins;
-  const location = props.text;
-
+const sendUserRequest = async (res, mins) => {
+  const lat = res.lat;
+  const lng = res.lng;
+  const minsVal = mins;
+  const postURL = process.env.REACT_APP_TEST_API_POST_URL;
   const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    mode: 'no-cors',
-    body: JSON.stringify({ mins: {mins}, location: {location} })
-  }
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ mins: minsVal, location: { lat, lng } }),
+  };
 
-  const postData = async (url = '', data = {}) => {
-    const response = await fetch(url, data);
-    const res = await response.json();
-    return res;
-  }
+  let response = await fetch(postURL, requestOptions);
+  let data = await response.json();
+  console.log(data.results);
+  return data.results;
+};
 
-  postData(postURL, requestOptions)
-  .then(data => {
-    console.log(data);
-  });
-}
-
-export default sendUserRequest
+export default sendUserRequest;
