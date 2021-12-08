@@ -31,19 +31,21 @@ const UserInputForm = ( {setUserLocation, fetchBars, setUserInputPresent } ) => 
 
   return (
     <div className="userInput">
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="centre location-form">
+        <div className="form-item">
         <label>
-          Enter Your Location:
+          Enter Postcode: 
           <input
             type="text"
-            placeholder="Enter Postcode"
+            placeholder="Ex. SW1A 1AA"
             value={text}
             onChange={setTextChange}
             data-testid="location-input"
             required
+            className="location-input centre"
           />
         </label>
-        <Box sx={{ width: 300 }}>
+        <Box sx={{ width: 300 }} className="centre">
           <label>
             How far do you want to walk?
             <Slider
@@ -60,7 +62,8 @@ const UserInputForm = ( {setUserLocation, fetchBars, setUserInputPresent } ) => 
             />
           </label>
         </Box>
-        <input type="submit" value="Submit" data-testid="submit-btn"/>
+        <input type="submit" value="Submit" class="btn submit" data-testid="submit-btn"/>
+        </div>
       </form>
     </div>
   );
