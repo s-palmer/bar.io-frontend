@@ -71,6 +71,8 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 2px 3px 3px grey;
+  margin-bottom:20px;
 }
 
 .bar-card-title {
