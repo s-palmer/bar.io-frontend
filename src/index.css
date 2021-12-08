@@ -23,6 +23,9 @@ code {
   border: 1px solid steelblue;
   padding: 5px;
   border-radius: 5px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .bars-maps {

@@ -13,7 +13,8 @@ const SocialFollow = () => {
   return (
     <div className='social-container' >
       <div>
-      <a href='https://makers.tech/'>Swep-iii @makersacademy</a>
+      <a 
+      href='https://makers.tech/'>Swep-iii @makersacademy</a>
       </div>
       <br/>
       <a 

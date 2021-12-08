@@ -1,4 +1,8 @@
 
+.social-container{
+  margin-top:  auto;
+} 
+
 li {
   list-style-type: none;
 }
@@ -14,3 +18,4 @@ a.social{
 a.social:hover {
   transform: translateY(-2px);
 }
+
