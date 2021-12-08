@@ -28,7 +28,7 @@ const Bar = ({ bar, location }) => {
       </div>
 
       <a href={BarLink} className="direction-button">
-        Take me to {bar.name}
+      <b>Take me to {bar.name}</b>
       </a>
     
     </div>
