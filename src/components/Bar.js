@@ -9,6 +9,12 @@ const Bar = ({ bar, location }) => {
         <h3>{bar.name}</h3>
       </div>
 
+      <div className="bar-card-info">
+        <p><b>Price Level:</b> {"£".repeat(bar.price_level)}</p>
+        <p><b>Rating:</b> {bar.rating}</p>
+        <p><b>No. Of Ratings:</b> {bar.user_ratings_total}</p>
+      </div>
+
       <div className="bar-card-image">
         <img
           width="100%"
@@ -17,11 +23,8 @@ const Bar = ({ bar, location }) => {
         ></img>
       </div>
 
-      <div className="bar-card-info">
+      <div className="bar-card-address">
         <p><b>Address:</b> {bar.formatted_address}</p>
-        <p><b>Price Level:</b> {"£".repeat(bar.price_level)}</p>
-        <p><b>Rating:</b> {bar.rating}</p>
-        <p><b>No. Of Ratings:</b> {bar.user_ratings_total}</p>
       </div>
 
       <a href={BarLink} className="direction-button">

@@ -20,7 +20,6 @@ code {
   max-width: 90%;
   margin: 30px auto;
   overflow: auto;
-  border: 1px solid steelblue;
   padding: 5px;
   border-radius: 5px;
 }
@@ -32,7 +31,6 @@ code {
   column-gap: 10px;
   margin: 5px 0px;
   overflow: hidden;
-  border: 1px solid steelblue;
 }
 
 .scroller {
@@ -65,14 +63,14 @@ code {
 
 .bar {
   background: #f4f4f4;
-  margin: 5px;
+  margin: 10px;
   padding: 10px 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 2px 3px 3px grey;
+  box-shadow: 5px 5px 5px grey;
   margin-bottom:20px;
+  margin-right:20px;
 }
 
 .bar-card-title {
@@ -83,12 +81,16 @@ code {
   margin-bottom:-20px;
 }
 
+.bar-card-info{
+  line-height: 20%;
+}
+
 .bar-card-image {
   border: 5px solid white
 }
 
-.bar-card-info {
-  line-height: 70%;
+.bar-card-address {
+  line-height: 100%;
 }
 
 .direction-button {
