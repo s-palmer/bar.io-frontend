@@ -62,11 +62,8 @@ function App() {
           </>
         )}
       </div>
-<<<<<<< HEAD
+}
       <Footer />
-=======
-      }
->>>>>>> main
     </div>
   );
 }
