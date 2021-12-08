@@ -3,7 +3,9 @@ import { useJsApiLoader } from "@react-google-maps/api";
 import Bars from "./components/Bars";
 import UserInputForm from "./components/UserInputForm";
 import MapComponent from "./components/MapComponent";
-import Header from "./components/Header";
+import Header from "./components/Header"
+import Footer from "./components/Footer/Footer";
+
 import "./App.css";
 import sendUserRequest from "./services/sendUserRequest";
 import "./loadingAnimation.css";
@@ -60,7 +62,8 @@ function App() {
           </>
         )}
       </div>
-      }
+}
+      <Footer />
     </div>
   );
 }
