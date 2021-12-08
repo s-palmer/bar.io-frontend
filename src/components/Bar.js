@@ -10,8 +10,8 @@ const Bar = ({ bar, location }) => {
       </div>
 
       <div className="bar-card-info">
-        <p><b>Price Level:</b> {"£".repeat(bar.price_level)}</p>
-        <p><b>Rating:</b> {bar.rating}</p>
+        <p><b>Price Level:</b> {"💰".repeat(bar.price_level)}</p>
+        <p><b>Rating:</b> {"⭐".repeat(bar.rating)}</p>
         <p><b>No. Of Ratings:</b> {bar.user_ratings_total}</p>
       </div>
 
