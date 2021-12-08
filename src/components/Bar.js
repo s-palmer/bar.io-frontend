@@ -5,28 +5,36 @@ const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 const Bar = ({ bar, location }) => {
   const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}&origin=${location.lat},${location.lng}`;
   const photoURL = `${photoApiURL}&key=${Apikey}&photo_reference=${bar.photo_reference}`
-
   return (
     <div className="bar">
-      <h3>{bar.name}</h3>
-      <p>Address: {bar.formatted_address}</p>
-      <p>Rating: {bar.rating}</p>
-      <p>Price Level: {bar.price_level}</p>
-      <p>User Ratings: {bar.user_ratings_total}</p>
 
-      <img
+    
+      <div className="bar-card-title">
+        <h3>{bar.name}</h3>
+      </div>
+
+      <div className="bar-card-info">
+        <p><b>Price Level:</b> {"£".repeat(bar.price_level)}</p>
+        <p><b>Rating:</b> {bar.rating}</p>
+        <p><b>No. Of Ratings:</b> {bar.user_ratings_total}</p>
+      </div>
+
+      <div className="bar-card-image">
+          <img
         width="100%"
         src={photoURL}
         alt={bar.name}
       ></img>
-      <ul>
-        {bar.types.map((type, index) => (
-          <li key={index}>{type}</li>
-        ))}
-      </ul>
+     
+      </div>
+
+      <div className="bar-card-address">
+        <p><b>Address:</b> {bar.formatted_address}</p>
+      </div>
       <a href={BarLink} className="direction-button">
         Take me to {bar.name}
       </a>
+    
     </div>
   );
 };

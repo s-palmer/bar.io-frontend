@@ -1,0 +1,36 @@
+
+.social-container{
+  margin-top:  auto;
+} 
+
+li {
+  list-style-type: none;
+}
+
+/* Social Follow Stuff */
+
+a.social{
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-3px);
+}
+
+a.gitHub{
+  color: black;
+}
+
+a.react{
+  color: blue
+}
+
+a.node{
+  color: rgb(104, 160, 99);
+}
+
+a.google{
+  color: whitesmoke;
+}
