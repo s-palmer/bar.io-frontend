@@ -11,29 +11,28 @@ import "./Footer.css";
 
 const SocialFollow = () => {
   return (
-    <div className='social-container' >
+    <div className='social-container'>
       <div>
-      <a 
-      href='https://makers.tech/'>Swep-iii @makersacademy</a>
+      <h3>@makers</h3>
+      
       </div>
-      <br/>
       <a 
-      href='https://github.com/makersacademy' className="social"
+      href='https://github.com/makersacademy' className="social gitHub"
       >
       <FontAwesomeIcon icon={faGithub} size='2x' />
       </a>
       <a 
-      href='https://reactjs.org/' className="social"
+      href='https://reactjs.org/' className="social react"
       >
       <FontAwesomeIcon icon={faReact} size='2x' />
       </a>
       <a 
-      href='https://nodejs.org/en/' className="social"
+      href='https://nodejs.org/en/' className="social node"
       >
       <FontAwesomeIcon icon={faNode} size='2x' />
       </a>
       <a 
-      href='https://cloud.google.com/apis/docs/overview' className="social"
+      href='https://cloud.google.com/apis/docs/overview' className="social google"
       >
       <FontAwesomeIcon icon={faGoogle} size='2x' />
       </a>
