@@ -1,9 +1,12 @@
-const DIR_URL = "https://www.google.com/maps/dir/?api=1&destination=";
+import photosApi from "../services/photosAPI";
+
+// const DIR_URL = "https://www.google.com/maps/dir/?api=1&destination=";
+
+const DIR_URL = process.env.REACT_APP_DIR_URL;
 
 const Bar = ({ bar }) => {
   const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}`;
-
-  // Need to add user origin when we have user location being taken from the form
+  const imgSRC = photosApi(bar.photo_reference)
 
   return (
     <div className="bar">
@@ -15,7 +18,7 @@ const Bar = ({ bar }) => {
 
       <img
         width="100%"
-        src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg"
+        src={imgSRC}
         alt="simmons-bar"
       ></img>
       <ul>
