@@ -17,7 +17,7 @@ const Bar = ({ bar, location }) => {
         ></img>
       </div>
 
-      <div name="bar-card-info">
+      <div className="bar-card-info">
         <p><b>Address:</b> {bar.formatted_address}</p>
         <p><b>Price Level:</b> {"£".repeat(bar.price_level)}</p>
         <p><b>Rating:</b> {bar.rating}</p>

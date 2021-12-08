@@ -85,7 +85,9 @@ code {
   border: 5px solid white
 }
 
-
+.bar-card-info {
+  line-height: 70%;
+}
 
 .direction-button {
   background-color: #1976d2;
