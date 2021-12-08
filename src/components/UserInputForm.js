@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import geoCoder from "../services/geoCoder";
 
-const UserInputForm = ( {setUserLocation, fetchBars, setUserInputPresent } ) => {
+const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
   const [text, setText] = useState("");
   const [mins, setMins] = useState(15);
 
@@ -13,8 +13,8 @@ const UserInputForm = ( {setUserLocation, fetchBars, setUserInputPresent } ) => 
     console.log(text, mins);
     const res = await geoCoder(setUserLocation, text);
     fetchBars(res, mins);
-  
-    setText('');
+
+    setText("");
   };
 
   const setTextChange = (event) => {
@@ -47,9 +47,9 @@ const UserInputForm = ( {setUserLocation, fetchBars, setUserInputPresent } ) => 
         </label>
         <Box sx={{ width: 300 }} className="centre">
           <label>
-            How far do you want to walk?
+            How many minutes do you want to walk?
             <Slider
-              aria-label="How far do you want to walk?"
+              aria-label="How many minutes do you want to walk?"
               defaultValue={15}
               getAriaValueText={sliderValue}
               onChange={setMinutesChange}

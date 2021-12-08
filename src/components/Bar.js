@@ -1,10 +1,14 @@
-const DIR_URL = "https://www.google.com/maps/dir/?api=1&destination=";
+const DIR_URL = process.env.REACT_APP_DIR_URL;
+const photoApiURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=600"
+const Apikey = process.env.REACT_APP_PLACES_API_KEY;
 
 const Bar = ({ bar, location }) => {
   const BarLink = `${DIR_URL}${bar.location.lat},${bar.location.lng}&origin=${location.lat},${location.lng}`;
+  const photoURL = `${photoApiURL}&key=${Apikey}&photo_reference=${bar.photo_reference}`
   return (
     <div className="bar">
 
+    
       <div className="bar-card-title">
         <h3>{bar.name}</h3>
       </div>
@@ -16,17 +20,17 @@ const Bar = ({ bar, location }) => {
       </div>
 
       <div className="bar-card-image">
-        <img
-          width="100%"
-          src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg"
-          alt="simmons-bar"
-        ></img>
+          <img
+        width="100%"
+        src={photoURL}
+        alt={bar.name}
+      ></img>
+     
       </div>
 
       <div className="bar-card-address">
         <p><b>Address:</b> {bar.formatted_address}</p>
       </div>
-
       <a href={BarLink} className="direction-button">
         Take me to {bar.name}
       </a>
