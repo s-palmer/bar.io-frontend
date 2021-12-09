@@ -5,10 +5,16 @@ const InfoWindowContent = ({selectedBar, userLocation}) => {
 
   return (
     <div className="map-infowindow">
-      <p>Bar name: {selectedBar.name}</p>
-      <a href={BarLink} className="infowindow-button">
-        Take me here
-      </a>
+      <p><b>{selectedBar.name}</b></p>
+        <img
+          width="100%"
+          height="auto"
+          src="https://node-test-api-bario.herokuapp.com/images/simmons.jpeg"
+          alt="simmons-bar"
+        ></img>
+        <a href={BarLink} className="map-infowindow-button">
+          Take me here
+        </a>
     </div>
   )
 }

@@ -58,8 +58,31 @@ code {
 } */
 
 .map-infowindow {
-  font-size: 20px;
-  
+  font-size: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: auto;
+  padding-left: 5px;
+}
+
+.map-infowindow-button {
+  background-color: #1976d2;
+  color: white;
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.map-infowindow-button:hover {
+  background-color: white;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  text-decoration: none;
 }
 
 .bars-list {
