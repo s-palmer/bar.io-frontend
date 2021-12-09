@@ -42,10 +42,7 @@ code {
   grid-template-columns: 65% 35%;
   column-gap: 10px;
   margin: 5px 0px;
-  border-radius: 12px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .scroller {
@@ -57,6 +54,12 @@ code {
 
 .bars-list-item {
   margin: 30px 0;
+}
+
+.map {
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 .map-infowindow {
