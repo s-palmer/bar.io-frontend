@@ -63,7 +63,7 @@ const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
             />
           </label>
         </Box>
-        <input type="submit" value="Submit" class="btn submit" data-testid="submit-btn"/>
+        <input type="submit" value="Submit" className="btn submit" data-testid="submit-btn"/>
         </div>
       </form>
     </div>

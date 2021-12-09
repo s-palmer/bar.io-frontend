@@ -3,24 +3,23 @@ version: 2.1
 
 # Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
 # See: https://circleci.com/docs/2.0/orb-intro/
-orbs: 
+orbs:
+  node: circleci/node@4.9.0
   react: thefrontside/react@0.2.0
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+jobs:
+  build:
+    docker:
+      - image: cimg/node:16.13.0
+    steps:
+      - checkout
+      - run: node --version
+
 workflows:
-  push:
-    jobs:
-      - react/install
-      - react/eslint:
-          requires:
-            - react/install
-      - react/stylelint:
-          requires:
-            - react/install
-      - react/test:
-          requires:
-            - react/install
-      - react/coverage:
-          requires:
-            - react/install
+    example-workflow:
+      jobs:
+        - node/test:
+            version: '16.13.0' 
+            run-command: test 
