@@ -74,6 +74,7 @@ const MapComponent = ({ bars, location }) => {
           {userMarker}
         </>
         {selectedBar && (
+          
           <InfoWindow
             position={{
               lat: selectedBar.location.lat,
@@ -88,6 +89,7 @@ const MapComponent = ({ bars, location }) => {
               userLocation={location}
             />
           </InfoWindow>
+          
         )}
       </GoogleMap>
     </div>
