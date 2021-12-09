@@ -41,8 +41,9 @@ Clone this repository. Then:
 ```bash
 > npm install
 > npm start
-> Runs the app in development mode.
 ```
+> Runs the app in development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view.
 
 ## [Team](https://github.com/s-palmer/barrio-frontend#team)
