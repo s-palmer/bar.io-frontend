@@ -16,7 +16,6 @@
 | <img src="public/images/heroku.png" height="auto" width="50"> | [Heroku](https://getbootstrap.com/) | Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. | Live deployment.
 
 ## [Usage](https://github.com/s-palmer/barrio-frontend#usage)
-=======
 
 ## Pre-Requisites
 
@@ -43,8 +42,8 @@ Clone this repository. Then:
 > npm install
 > npm start
 > Runs the app in development mode.
-Open [http://localhost:3000](http://localhost:3000) to view.
 ```
+Open [http://localhost:3000](http://localhost:3000) to view.
 
 ## [Team](https://github.com/s-palmer/barrio-frontend#team)
 
