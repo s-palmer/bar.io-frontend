@@ -10,14 +10,14 @@ orbs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 jobs:
+  build:
+    docker:
+      - image: cimg/node:16.13.0
+    steps:
+      - checkout
+      - run: node --version
   test:
-    executor: node/default
-      steps:
-        - checkout
-         - node/install-packages:
-            cache-path: ~/project/node_modules
-            override-ci-command: npm install
-         - run: npm run test
+      - run: npm run test
       # - react/install
       # - react/eslint:
       #     requires:
@@ -31,3 +31,8 @@ jobs:
       # - react/coverage:
       #     requires:
       #       - react/install
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test
