@@ -31,7 +31,7 @@
 In a .env file:
 
 - REACT_APP_PLACES_API_KEY=[GOOGLE_CLOUD_API_KEY]
-- REACT_APP_TEST_API_POST_URL=[Deployed version of backend](https://github.com/Matt-Warnock/barrio-backend) using /bars endpoint.
+- REACT_APP_TEST_API_POST_URL=(Link to [Deployed version of backend](https://github.com/Matt-Warnock/barrio-backend) using /bars endpoint)
 - REACT_APP_DIR_URL=https://www.google.com/maps/dir/?api=1&destination=
 
 ## Quickstart
