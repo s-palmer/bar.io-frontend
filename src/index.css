@@ -185,3 +185,31 @@ input[type=text] {
 .location-h2 {
   text-align: center;
 }
+
+
+.social-container{
+  margin-top:  auto;
+} 
+
+.userInput{
+  font-size: 13px;
+}
+
+.form-item input{
+  display: center;
+  margin: .9vw 0 ;
+  border: 1px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.form-item {
+  background: #FAF0E6;
+  border-radius: 5px;
+  opacity: 4;
+  
+}
+
+.form-box textarea{
+  height: 5h;
+}

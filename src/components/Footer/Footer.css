@@ -1,34 +1,4 @@
 
-.social-container{
-  margin-top:  auto;
-} 
-
-li {
-  list-style-type: none;
-}
-
-.userInput{
-  font-size: 13px;
-}
-
-.form-item input{
-  display: center;
-  margin: .9vw 0 ;
-  border: 1px;
-  border-radius: 5px;
-  font-size: 13px;
-}
-
-.form-item {
-  background: whitesmoke;
-  border-radius: 5px;
-}
-
-
-.form-box textarea{
-  height: 5h;
-}
-
 /* Social Follow Stuff */
 
 a.social{
