@@ -9,17 +9,15 @@ orbs:
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  push:
-    jobs:
-      test:
-        executor: node/default
-          steps:
-            - checkout
-            - node/install-packages:
-                cache-path: ~/project/node_modules
-                override-ci-command: npm install
-            - run: npm run test
+jobs:
+  test:
+    executor: node/default
+      steps:
+        - checkout
+         - node/install-packages:
+            cache-path: ~/project/node_modules
+            override-ci-command: npm install
+         - run: npm run test
       # - react/install
       # - react/eslint:
       #     requires:
