@@ -34,7 +34,9 @@ const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
       <form onSubmit={onSubmit} className="centre location-form">
         <div className="form-item">
         <label>
-          Enter Postcode: 
+          <br/>
+          Enter Postcode:
+          <br/>
           <input
             type="text"
             placeholder="Ex. SW1A 1AA"
