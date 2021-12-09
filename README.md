@@ -13,7 +13,7 @@
 | <img src="public/images/node.png" height="auto" width="50">  | [Node](https://nodejs.org/en/) | NodeJS is a back-end JavaScript runtime environment | [Backend Repo](https://github.com/Matt-Warnock/barrio-backend) |
 | <img src="public/images/express.png" height="auto" width="50"> | [ExpressJS](https://expressjs.com/) | ExpressJS is a fast, unopinionated, minimalist web framework for Node.js | [Backend Repo](https://github.com/Matt-Warnock/barrio-backend) |
 | <img src="public/images/material.png" height="auto" width="50"> | [MUI](https://mui.com/) | MaterialUI is a React component library. | Components on Frontend. |
-| <img src="public/images/heroku.png" height="auto" width="50"> | [Heroku](https://getbootstrap.com/) | Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. | Live deployment.
+| <img src="public/images/heroku.png" height="auto" width="50"> | [Heroku](https://www.heroku.com/) | Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. | Live deployment.
 
 ## [Usage](https://github.com/s-palmer/barrio-frontend#usage)
 
