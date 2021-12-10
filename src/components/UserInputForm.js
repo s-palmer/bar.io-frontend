@@ -35,8 +35,7 @@ const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
       <form onSubmit={onSubmit} className="centre location-form">
         <div className="form-item">
           <label>
-            Enter Postcode:
-            <br/>
+            <h3>Enter Postcode:</h3>
             <input
               type="text"
               placeholder="Ex. SW1A 1AA"
@@ -49,7 +48,7 @@ const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
           </label>
           <Box sx={{ width: 300 }} className="centre">
             <label>
-              How many minutes do you want to walk?
+              <h3>How many minutes do you want to walk?</h3>
               <Slider
                 aria-label="How many minutes do you want to walk?"
                 defaultValue={15}
