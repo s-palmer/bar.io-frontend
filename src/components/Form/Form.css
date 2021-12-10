@@ -1,0 +1,15 @@
+.userInput{
+  font-size: 13px;
+}
+
+.form-item input{
+  display: center;
+  margin: .9vw 0 ;
+  border: 0;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.form-box textarea{
+  height: 5h;
+}

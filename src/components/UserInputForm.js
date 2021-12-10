@@ -2,6 +2,7 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import geoCoder from "../services/geoCoder";
+import './Form/Form.css'
 
 const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
   const [text, setText] = useState("");
@@ -33,35 +34,35 @@ const UserInputForm = ({ setUserLocation, fetchBars, setUserInputPresent }) => {
     <div className="userInput">
       <form onSubmit={onSubmit} className="centre location-form">
         <div className="form-item">
-        <label>
-          Enter Postcode: 
-          <input
-            type="text"
-            placeholder="Ex. SW1A 1AA"
-            value={text}
-            onChange={setTextChange}
-            data-testid="location-input"
-            required
-            className="location-input centre"
-          />
-        </label>
-        <Box sx={{ width: 300 }} className="centre">
           <label>
-            How many minutes do you want to walk?
-            <Slider
-              aria-label="How many minutes do you want to walk?"
-              defaultValue={15}
-              getAriaValueText={sliderValue}
-              onChange={setMinutesChange}
-              valueLabelDisplay="auto"
-              step={5}
-              marks={true}
-              min={5}
-              max={30}
-              data-testid="minutes-input"
+            <h3>Enter Postcode:</h3>
+            <input
+              type="text"
+              placeholder="Ex. SW1A 1AA"
+              value={text}
+              onChange={setTextChange}
+              data-testid="location-input"
+              required
+              className="location-input centre"
             />
           </label>
-        </Box>
+          <Box sx={{ width: 300 }} className="centre">
+            <label>
+              <h3>How many minutes do you want to walk?</h3>
+              <Slider
+                aria-label="How many minutes do you want to walk?"
+                defaultValue={15}
+                getAriaValueText={sliderValue}
+                onChange={setMinutesChange}
+                valueLabelDisplay="auto"
+                step={5}
+                marks={true}
+                min={5}
+                max={30}
+                data-testid="minutes-input"
+              />
+            </label>
+          </Box>
         <input type="submit" value="Submit" className="btn submit" data-testid="submit-btn"/>
         </div>
       </form>

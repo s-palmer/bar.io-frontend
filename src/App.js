@@ -58,11 +58,10 @@ function App() {
           </div>
         ) : (
           <>
-            <h2 className="centre location-h2">Please enter your location</h2>
           </>
         )}
       </div>
-}
+      }
       <Footer />
     </div>
   );
