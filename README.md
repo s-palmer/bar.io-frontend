@@ -10,8 +10,8 @@
 | Logo | Tool | Use | Where is it used? |
 | ---------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------- |
 | <img src="public/images/react.png" height="auto" width="50"> | [ReactJS](https://reactjs.org/) | ReactJS is a front-end JavaScript library for building user interfaces based on UI components. | Frontend built using ReactJS. |
-| <img src="public/images/node.png" height="auto" width="50">  | [Node](https://nodejs.org/en/) | NodeJS is a back-end JavaScript runtime environment | [Backend Repo](https://github.com/Matt-Warnock/barrio-backend) |
-| <img src="public/images/express.png" height="auto" width="50"> | [ExpressJS](https://expressjs.com/) | ExpressJS is a fast, unopinionated, minimalist web framework for Node.js | [Backend Repo](https://github.com/Matt-Warnock/barrio-backend) |
+| <img src="public/images/node.png" height="auto" width="50">  | [Node](https://nodejs.org/en/) | NodeJS is a back-end JavaScript runtime environment | [Backend Repo](https://github.com/s-palmer/barrio-backend) |
+| <img src="public/images/express.png" height="auto" width="50"> | [ExpressJS](https://expressjs.com/) | ExpressJS is a fast, unopinionated, minimalist web framework for Node.js | [Backend Repo](https://github.com/s-palmer/barrio-backend) |
 | <img src="public/images/material.png" height="auto" width="50"> | [MUI](https://mui.com/) | MaterialUI is a React component library. | Components on Frontend. |
 | <img src="public/images/heroku.png" height="auto" width="50"> | [Heroku](https://www.heroku.com/) | Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. | Live deployment.
 
@@ -31,7 +31,7 @@
 In a .env file:
 
 - REACT_APP_PLACES_API_KEY=[GOOGLE_CLOUD_API_KEY]
-- REACT_APP_TEST_API_POST_URL=(Link to [Deployed version of backend](https://github.com/Matt-Warnock/barrio-backend) using /bars endpoint)
+- REACT_APP_TEST_API_POST_URL=(Link to [backend server](https://github.com/s-palmer/barrio-backend) using /bars endpoint)
 - REACT_APP_DIR_URL=https://www.google.com/maps/dir/?api=1&destination=
 
 ## Quickstart
