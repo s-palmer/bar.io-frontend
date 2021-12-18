@@ -2,7 +2,7 @@
 
 A React-based frontend for the Bar.io app. Bar.io was built under two weeks as the final software engineering project for Makers Academy in London.
 
-[Presentation](https://docs.google.com/presentation/d/e/2PACX-1vTTYLB9d6gT8pyDuFgiDxTzTHwZWLJv09X4ef-chxh1mP6jajOv99bmqAf04h3b8G6Tdut1BYvTaxgt/pub?start=true&loop=false&delayms=30000)
+To learn more about the idea behind Bar.io and how it works, you can view our [Final Presentation](https://docs.google.com/presentation/d/e/2PACX-1vTTYLB9d6gT8pyDuFgiDxTzTHwZWLJv09X4ef-chxh1mP6jajOv99bmqAf04h3b8G6Tdut1BYvTaxgt/pub?start=true&loop=false&delayms=30000).
 
 ## Table of Contents
 
